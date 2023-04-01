@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html5 y CSS5</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="../../public/vedor/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="../../public/css/sb-admin-2.min.css">
+ 
+</head>
+<style>
+.flex-container {
+    display: flex;
+    flex-direction: row; /* row x defecto linea, row-reverse en linea alreves, column por columna, column-reversa idem columna al reves */
+    flex-wrap:wrap;/* se adapta en mas renglones cuando se achica pantalla responsive */
+    justify-content:center;
+    background-color: dodgerblue;
+}
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+</style>
+<main>
+    <article>
+        <section class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>   
+        </section>
+    </article> 
+    <div >
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</main>
+
+</html>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../../public/vendor/jquery/jquery.min.js"></script>
+<script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="../../public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="../../public/js/sb-admin-2.min.js"></script>
+<script src="../../public/js/javaScript.js"></script>
