@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html5 y CSS5</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="../../public/vedor/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="../../public/css/sb-admin-2.min.css">
+ 
+</head>
+<canvas  id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
+
+</canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+    ctx.moveTo(200,100);
+    ctx.lineTo(500,500);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(250, 250, 300, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // Create gradient
+    var grd = ctx.createLinearGradient(75, 50, 5, 90, 60 , 100 );
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle =grd;
+    ctx.fillRect(10, 10, 150, 80);
+    
+</script>
+
+</html>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../../public/vendor/jquery/jquery.min.js"></script>
+<script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="../../public/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="../../public/js/sb-admin-2.min.js"></script>
+<script src="../../public/js/javaScript.js"></script>
