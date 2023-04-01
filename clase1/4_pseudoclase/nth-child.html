@@ -15,16 +15,38 @@
  
 </head>
 <style>
- /* Selector > */
-main > section> h2 {
-    color: #606bf2;
+ /* Ejemplo de pseudoclases nth-child indice comienza con 1 */
+article section p:nth-child(2){
+    font-size:300%;
+    font-weight:bold;
+}
+div div p:nth-child(3){
+    background: red;
+    width: 200px;
+    height: 50px;
 }
 </style>
 <main>
-    <section>
-        <h2>Ejemplo de selector hijo 1.</h2>
-    </section>
-    <h2>Ejemplo de selector hijo 2.</h2>
+    <article>
+        <section>
+            <p>Elemento 1</p>
+            <p>Elemento 2</p>
+            <p>Elemento 3</p>
+            <p>Elemento 4</p>
+            <p>Elemento 5</p>
+            <p>Elemento 6</p>
+        </section>
+    </article> 
+    <div>
+        <div>
+            <p>Aplicar estilo impar</p>
+            <p>Aplicar estilo par</p>
+            <p>Aplicar estilo impar</p>
+            <p>Aplicar estilo par</p>
+            <p>Aplicar estilo impar</p>
+            <p>Aplicar estilo par</p>
+        </div>
+    </div>
 </main>
 
 </html>

@@ -15,16 +15,35 @@
  
 </head>
 <style>
- /* Selector > */
-main > section> h2 {
-    color: #606bf2;
+ /* Ejemplo de pseudoclases first-child c */
+article section p:first-child{
+    font-size:300%;
+    font-weight:bold;
+}
+div div p:first-child{
+    background: red;
+    width: 200px;
+    height: 50px;
 }
 </style>
 <main>
-    <section>
-        <h2>Ejemplo de selector hijo 1.</h2>
-    </section>
-    <h2>Ejemplo de selector hijo 2.</h2>
+    <article>
+        <section>
+
+            <p>Primer Parrafo</p>
+            <p>Segundo parrafo</p>
+            <p>Tercer parrafo</p>
+            <p>Cuarto parrafo</p>
+        </section>
+    </article> 
+    <div>
+        <div>
+            <p>Primer Parrafo</p>
+            <p>Segundo parrafo</p>
+            <p>Tercer parrafo</p>
+            <p>Cuarto parrafo</p>
+        </div>
+    </div>
 </main>
 
 </html>

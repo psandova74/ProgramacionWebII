@@ -15,16 +15,22 @@
  
 </head>
 <style>
- /* Selector > */
-main > section> h2 {
-    color: #606bf2;
+ /* Selector adyacente, p proximo al H2*/
+section > h2 + p {
+    text-transform: uppercase;
 }
 </style>
 <main>
-    <section>
-        <h2>Ejemplo de selector hijo 1.</h2>
-    </section>
-    <h2>Ejemplo de selector hijo 2.</h2>
+    <article>
+        <section>
+            <h2>Este es el elemento H2.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit facilis voluptate cum qui perferendis officia illum omnis fugiat ad, praesentium dignissimos quisquam expedita in suscipit alias molestias modi nobis eaque?</p>
+            <p>Otro parrafo</p>
+        </section>
+    </article> 
+    <h2>Este es el elemento H2. Fuera del section</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit facilis voluptate cum qui perferendis officia illum omnis fugiat ad, praesentium dignissimos quisquam expedita in suscipit alias molestias modi nobis eaque?</p>
+    <p>Otro parrafo</p>
 </main>
 
 </html>
