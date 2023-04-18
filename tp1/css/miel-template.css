@@ -1,0 +1,287 @@
+/* ================================================================ */
+/* ============= MIEL TEMPLATE: ESTRUCTURA DEL SITIO ============== */
+/* ================================================================ */
+
+i.material-icons {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+/* =============== ENCABEZADO =============== */
+
+#encabezado {
+    z-index: 10 !important;
+}
+#encabezado .logos {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#encabezado .logos img {
+    height: 34px;
+    width: auto;
+}
+#encabezado .fotoPerfil {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#encabezado .nombreUsuario {
+    font-size: 13px;
+    padding: 4px 0 0;
+}
+
+/* ============== MENU PRINCIPAL ============== */
+
+#menu-principal .material-icons {
+    font-size: 22px !important;
+}
+
+/* =============== MENU LATERAL =============== */
+
+#menu-lateral {
+    z-index: 8;
+    width: 230px;
+    top: 88px;
+}
+#menu-lateral-inner {
+    position: fixed;
+    top: 0;
+    width: 230px;
+    height: 100%;
+    padding-top: 88px;
+    padding-bottom: 0;
+}
+#menu-lateral-inner-inner {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+#menu-lateral-overlay {
+    z-index: 6;
+    cursor: pointer;
+}
+#menu-lateral a.menu-opcion i.material-icons {
+    font-size: 21px !important;
+}
+
+/* ================ CONTENEDOR =============== */
+
+main.w3-container {
+    margin-left: 230px;
+    margin-top: 97px;
+    padding-left: 26px;
+    padding-right: 20px;
+}
+@media only screen and (max-width: 992px) {
+    main.w3-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* ================= TABLAS ================ */
+
+.w3-table td,
+.w3-table th,
+.w3-table td:first-child,
+.w3-table th:first-child {
+    padding: 6px ;
+}
+.w3-table th {
+    vertical-align: bottom;
+}
+
+.w3-row-padding, .w3-row-padding > div:first-child {
+    padding-left: 0;
+}
+.w3-row-padding, .w3-row-padding > div:last-child {
+    padding-right: 0;
+}
+
+.w3-table td.w3-cell-middle {
+    vertical-align: middle;
+}
+
+i.icono-td {
+    font-size: 22px;
+    line-height: 0.9;
+}
+
+/* ================ HELPERS =============== */
+
+.w3-btn, .w3-btn-block {
+    border-radius: 3px;
+}
+.input-addon .w3-btn {
+    border-radius: 0;
+}
+.input-addon .w3-btn:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.w3-btn-icon {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Ocultar sin usar display:none (para formularios) */
+.hide-sizing {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+}
+
+/* fijar el tamano de los textareas */
+textarea.fixed-x {
+    resize: vertical;
+}
+textarea.fixed-all {
+    resize: none;
+}
+textarea {
+    min-height: 32px;
+}
+
+/* padding cero laterales */
+.w3-padding-top-0 {
+    padding-top: 0 !important;
+}
+.w3-padding-bottom-0 {
+    padding-bottom: 0 !important;
+}
+.w3-padding-left-0 {
+    padding-left: 0 !important;
+}
+.w3-padding-right-0 {
+    padding-right: 0 !important;
+}
+
+/* elimina el padding lateral del elemento en pantalla mobile */
+@media (max-width:600px) {
+    .mobile-padding-0 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}
+/* elimina el padding lateral del elemento en pantalla tablet */
+@media (max-width:993px) {
+    .tablet-padding-0 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}
+
+/* padding lateral de 32px */
+.w3-padding-lateral-32 {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+.w3-margin-left-32 {
+    margin-left: 32px !important;
+}
+
+/* tamano y reponsive de los popup */
+.w3-modal-content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.w3-modal-content header {
+    border-radius: 5px 5px 0 0;
+}
+@media (min-width:768px) {
+    .w3-modal-content.small-popup{width:500px}
+    .w3-modal-content.wide-popup{width:85%}
+}
+@media (max-width:768px) {
+    .w3-modal-content.wide-popup{width:auto}
+}
+
+/* addon para los input */
+.input-addon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.input-addon-field {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/* contenedor flex para hacer cards todas con la misma altura */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-container > div {
+    display: flex;
+}
+
+/* ajusto estilos de los tabs */
+.w3-topbar, .w3-bottombar, .w3-leftbar, .w3-rightbar {
+    border-width: 4px !important;
+}
+.w3-bar .w3-bar-item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* alineo el icono dentro de los tags */
+.w3-tag .material-icons {
+    vertical-align: text-top;
+}
+
+/* z-index de los menus desplegables para que no los pise el footer */
+.w3-dropdown-content {
+    z-index: 1;
+}
+
+/* ================== FIXES ================= */
+
+/* TINYMCE CORRECCION */
+.mce-path { padding: 0 !important; }
+.mce-edit-area label {
+    padding: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 13px 8px;
+    font-size: 13px;
+}
+/* TINYMCE EMOTICONS */
+a.mce-emoticon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+a.mce-emoticon:hover {
+    background-color: #3498db;
+}
+span.mce-emoticon {
+    font-size: 1.5em;
+}
+
+/* GOOGLE CHARTS FIX PARA TOOLTIP TITILANDO */
+svg > g > g:last-child { pointer-events: none }
+
+
+/* REESCRIBO ESTILOS DE AUDIO PARA CHROME */
+audio {
+    /*width: 500px;*/
+}
+audio::-webkit-media-controls-panel {
+    background-color: white !important;
+}
+audio::-webkit-media-controls-enclosure {
+    border-radius: 0 !important;
+    border: 1px solid #ccc;
+}

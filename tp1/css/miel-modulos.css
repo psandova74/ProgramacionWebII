@@ -1,0 +1,602 @@
+/* ================================================================ */
+/* ======== ESTILOS ADICIONALES USADOS EN LAS HERRAMIENTAS ======== */
+/* ================================================================ */
+
+/* ===================== INTERNO ===================== */
+
+.materia-descripcion {
+    width: 340px;
+}
+.materia-titulo {
+    font-weight: 500;
+}
+.materia-herramientas {
+    color: #555;
+}
+.materia-herramientas > div > a {
+    width: 86px;
+    position: relative;
+    text-decoration: none;
+}
+.materia-herramientas span.w3-badge {
+    z-index: 5;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+}
+.materia-bloque {
+    border-radius: 3px;
+}
+.materia-bloque-oculta {
+    opacity: .7;
+}
+
+/* ================== ADMINISTRACION ================= */
+
+/* tabla con las herramientas del curso */
+.herramientaNombre {
+    width: 180px;
+}
+.herramientaCombo {
+    width: 140px;
+}
+.herramientaIcono {
+    width: 30px;
+}
+
+/* ===================== AUTOGUIA ==================== */
+
+.autoguia-boton-modulo {
+    margin: -3px -12px -3px 10px;
+    width: 130px;
+}
+
+.autoguia-boton-agregar-elemento {
+    width: 210px;
+}
+
+.autoguia-boton-multimedia {
+    margin-bottom: 4px;
+}
+
+div.video-embed {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* aspect ratio 16:9 */
+}
+div.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+}
+
+/* ==================== AYUDA/FEEDBACK =================== */
+
+.card-ayuda {
+    height: 70px;
+    border-radius: 3px;
+}
+.card-ayuda .icono-ayuda {
+    width: 70px;
+    border-radius: 3px 0 0 3px;
+}
+
+label.feedback-option > input {
+    visibility: hidden;
+    position: absolute;
+}
+
+label.feedback-option > i {
+    font-size: 36px;
+    color: #ccc;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Chrome/Opera */
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    -ms-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+}
+
+label.feedback-option:hover > i {
+    color: #aaa;
+}
+
+label.feedback-option > input:checked + i {
+    color: #2196F3;
+}
+
+
+/* ==================== CONTENIDOS =================== */
+
+/* letras del glosario */
+.letra-filtro {
+    padding: 2px 8px;
+    margin: 1px 2px;
+}
+.letra-filtro:first-child {
+    padding-left: 0;
+}
+.letra-filtro span {
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* ======================= CHAT ====================== */
+
+#div-chat-conversaciones {
+    width: 300px;
+}
+@media (max-width:992px) {
+    #div-chat-conversaciones {
+        width: 250px;
+    }
+}
+
+.div-chat-conversaciones-elemento {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#div-chat-mensajes {
+    height: 50vh;
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+@media (max-width:600px) {
+    #div-chat-mensajes {
+        height: 65vh;
+    }
+}
+
+#div-chat-form {
+    padding: 10px 10px 0;
+    display: none; /* se hace visible si hay alguna comision */
+}
+#form-chat-submit {
+    width: 36px;
+    height:36px;
+    padding: 7px 0;
+}
+
+.chat-bubble {
+    margin: 10px;
+    position: relative;
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.chat-bubble-left {
+    margin-right: 60px;
+    background-color: #f1f1f1;
+}
+.chat-bubble-right {
+    margin-left: 60px;
+    background-color: #4CAF50;
+    color: white;
+}
+@media (max-width:600px) {
+    .chat-bubble-left {
+        margin-right: 30px;
+    }
+    .chat-bubble-right {
+        margin-left: 30px;
+    }
+}
+
+.chat-bubble-left:after,
+.chat-bubble-right:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    bottom: auto;
+    border: 10px solid;
+}
+
+.chat-bubble-left:after {
+    left: -10px;
+    right: auto;
+    border-color: #f1f1f1 transparent transparent transparent;
+}
+
+.chat-bubble-right:after{
+    left: auto;
+    right: -10px;
+    border-color: #4CAF50 transparent transparent transparent;
+}
+
+
+/* ==================== ENCUESTA =================== */
+
+.encuesta-pregunta {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+}
+
+
+/* ==================== EVALUACION =================== */
+
+#tiempo {
+    position: fixed;
+    top: 12px;
+    left: 40%;
+    z-index: 99;
+    width: 250px;
+    text-align: center;
+}
+
+.imagen-evaluacion {
+    padding: 4px;
+    max-width: 100%;
+    max-height: 300px;
+    cursor: zoom-in;
+}
+
+
+/* ======================= FORO ====================== */
+
+.foro-tema {
+    position: relative;
+}
+
+.foro-icono .w3-badge {
+    z-index:  5;
+    position: absolute;
+    top:      25px;
+    left:     32px;
+}
+
+.foro-contenido-mensaje p:first-child {
+    margin-top: 0;
+}
+
+.foro-contenido-mensaje p span {
+    word-wrap: break-word;
+}
+
+.foro-contenido-mensaje img {
+    max-width: 100%;
+    height: auto;
+}
+
+li.foro-mensaje {
+    border-bottom: none !important;
+    padding: 16px 8px !important;
+}
+
+li.foro-respuesta {
+    margin-left: 60px;
+    border-bottom: none !important;
+    padding: 12px 8px !important;
+}
+
+li.foro-mensaje .foro-fotoPerfil {
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+li.foro-respuesta .foro-fotoPerfil {
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+@media (max-width:600px) {
+    li.foro-respuesta {
+        margin-left: 20px;
+    }
+    li.foro-mensaje, li.foro-respuesta {
+        padding: 12px 4px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .foro-modal {
+        padding-top: 25%;
+    }
+}
+
+/* ======================= FOROV2 ====================== */
+
+.cursorPointer:hover{
+    cursor: pointer;
+}
+
+.foroImgAdjuntos {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    max-width: 300px;
+}
+
+.foroImgAdjuntosModal {
+    width: 100%;
+    height: auto;
+    cursor: zoom-out;
+    margin-bottom: -10px;
+}
+
+@media (max-width: 768px) {
+    .foro-modal {
+        padding-top: 25%;
+    }
+}
+
+.li-ver-mas {
+    margin-left: 60px;
+    text-align: center;
+    padding: 5px 0;
+    color: #4caf50;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+}
+
+@media (max-width:600px) {
+    .li-ver-mas {
+        margin-left: 20px;
+    }
+}
+
+.li-ver-mas > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.respuestaOculta {
+    display: none;
+}
+
+.foro-icon-ver-mas{
+    vertical-align: middle;
+}
+
+/* =================== MENSAJERIA ==================== */
+
+.tabla-mensajes td:hover {
+    cursor: default;
+}
+
+.tabla-mensajes tr a {
+    text-decoration: none;
+}
+.tabla-mensajes tr a:hover {
+    text-decoration: underline;
+}
+
+tr.mensaje-no-leido td,
+tr.mensaje-no-leido a {
+    font-weight: bold;
+}
+tr.mensaje-no-leido a {
+    color: #4caf50;
+}
+tr.mensaje-no-leido td:first-child {
+    border-left: 4px solid #4caf50;
+}
+tr.mensaje-no-leido {
+    background-color: #f4faf4;
+}
+
+#listaDestinatarios {
+    max-height: 300px;
+    overflow-y: scroll;
+    z-index: 5;
+}
+#listaDestinatarios a {
+    padding-right: 25px;
+}
+
+.fotoRemitente {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.chip {
+    line-height: 2.3;
+    height: 30px;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    background-color: #eeeeee;
+}
+.chip:hover {
+    background-color: #e0e0e0;
+}
+.chip .chip-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 50%;
+    margin-right: 4px;
+    text-align: center;
+}
+.chip .chip-close {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 50%;
+    margin-left: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+@media only screen and (max-width:601px){
+    .chip {
+        margin: 5px 4px 2px 4px;
+    }
+}
+
+img[data-emoticon='true'] {
+    width: 1.4em !important;
+    height: 1.4em !important;
+    vertical-align: -0.3em !important;
+}
+
+
+/* ===================== NOVEDADES ==================== */
+
+.novedad .novedad-imagen {
+    width: 200px;
+    padding-top: 4px;
+}
+.novedad .novedad-imagen a {
+    cursor: zoom-in;
+}
+.novedad .novedad-imagen img {
+    max-height: 200px;
+    max-width: 200px;
+    height: auto;
+    width: auto;
+}
+@media (max-width:600px) {
+    .novedad .novedad-imagen img {
+        max-height: 100%;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+}
+.novedad .novedad-imagen .novedad-sin-imagen {
+    height: 120px;
+    width: auto;
+}
+.novedad .novedad-imagen .novedad-sin-imagen i {
+    font-size: 90px;
+    line-height: 120px
+}
+
+
+/* ====================== PERFIL ===================== */
+
+#perfil-fotoAvatar {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#perfil-fotoAvatarLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+#perfil-fotoAvatarLayerText {
+    margin: 35% 10px 0;
+    color: white;
+}
+
+
+/* ===================== TABLERO ===================== */
+
+.grafico-barras {
+    white-space: nowrap;
+}
+.grafico-barras div {
+    display: inline-block;
+    width: 10px;
+    vertical-align: bottom;
+}
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4 {font-weight: 600}
+.markdown h1 {font-size: 24px; border-bottom: 1px solid #bbbbbb; padding: .5rem 0}
+.markdown h2 {font-size: 18px; border-bottom: 1px solid #cccccc; padding: .5rem 0}
+.markdown h3 {font-size: 16px}
+.markdown h4 {font-size: 14px}
+
+
+/* ===================== TUTORIA ===================== */
+
+/* linea divisoria del listado de entregas y correcciones */
+div.entrega {
+    border-top: 1px solid #bbbbbb;
+}
+div.correccion {
+    border-top: 2px solid #bbbbbb;
+}
+
+/* marca para las practicas sin corregir */
+.practica-no-corregida td:first-child {
+    border-left: 4px solid #4caf50;
+}
+
+/* tabla de asistencia */
+th.asistencia-fecha {
+    width: 30px;
+    font-weight: normal;
+    font-size: 11px;
+    padding: 3px !important;
+    vertical-align: middle;
+}
+td.asistencia-estado > div {
+    border-radius: 8px;
+}
+td.asistencia-estado {
+    padding: 3px !important;
+    vertical-align: middle;
+}
+
+/* ==================== COMPETENCIAS ==================== */
+
+.contenedor-tabla-competencias {
+    display: block;
+    overflow-x: auto;
+}
+
+.tabla-competencias th {
+    vertical-align: middle;
+}
+
+.tabla-competencias td,
+.tabla-competencias th {
+    border: 1px solid #9e9e9e;
+}
+
+.tabla-competencias th.nivel {
+    width: 150px;
+}
+
+.btnAbrirPopupCompetencia {
+    cursor: pointer;
+}
+
+/* ===================== PORTAFOLIO ===================== */
+
+div.asistencia-alumno {
+    width: 90px;
+    display: inline-block;
+    margin: 0 6px 16px 0;
+}

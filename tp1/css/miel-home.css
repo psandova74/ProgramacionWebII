@@ -1,0 +1,188 @@
+/* ================================================================ */
+/* =============== ESTILOS DE LA HOME PAGE DE MIEL ================ */
+/* ================================================================ */
+
+/* =========== GENERAL =========== */
+
+body {
+    background: url('../imagenes/home/fondo-trama.png') repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Sans Condensed', sans-serif !important;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* =========== ENCABEZADO =========== */
+
+header > div {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+@media (max-width:600px) {
+    header > div {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+    header img {
+        height: 32px;
+    }
+}
+
+/* =========== LOGIN =========== */
+
+section#login {
+    height: 550px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+section#login a {
+    font-family: 'Fira Sans Condensed', sans-serif !important;
+    font-size: 16px;
+}
+
+@media (max-width:600px) {
+    section#login {
+        height: auto;
+    }
+    #card-home {
+        width: 100% !important;
+    }
+    #login > div {
+        padding: 0 !important;
+    }
+}
+
+section#login hr {
+    border-top: 1px dashed black;
+    margin: 16px 0;
+}
+
+input {
+    outline: none;
+    padding: 6px 6px !important;
+}
+
+/* Animacion de subrayado de los campos de login */
+.input-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.input-bar:before,
+.input-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+.input-bar:before { left: 50%; }
+.input-bar:after { right: 50%; }
+
+input:focus ~ .input-bar:before,
+input:focus ~ .input-bar:after {
+    width: 50%;
+}
+
+/* ========= CONTENIDO ========= */
+
+.noticia {
+    display:none;
+}
+
+.noticia h6,
+.noticia h4,
+.w3-modal-content h6,
+.w3-modal-content h5,
+.w3-modal-content h4 {
+    text-transform: uppercase;
+}
+
+.cards-contenido {
+    height: 300px;
+}
+
+.cards-contenido > div:first-child {
+    padding-right: 8px;
+}
+.cards-contenido > div:last-child {
+    padding-left: 8px;
+}
+
+.card-contenido {
+    width: 50%;
+    height: 100%;
+}
+
+.card-contenido > div {
+    height: 100%;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+video {
+    outline: none;
+}
+
+@media (max-width:600px) {
+    .cards-contenido {
+        height: auto;
+    }
+    .card-contenido {
+        width: 100%;
+        display: block;
+        padding-bottom: 12px;
+    }
+    .card-contenido > div {
+        height: auto;
+    }
+}
+
+.card-enlace {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.w3-row-padding>.col-middle {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* =========== FOOTER =========== */
+
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .redes img {
+    margin-right: 6px;
+    height: 26px;
+}
+footer .footer-miel {
+    background-color: #333;
+}
