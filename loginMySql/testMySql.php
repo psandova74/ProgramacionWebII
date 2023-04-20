@@ -34,7 +34,7 @@ if(isset($_POST["Enviar"])) {
     //Sino se seteo nada, empieza del inicio y la lista completa.
     var_dump($filas);
 
-   // $db.close();  // Cerrar la conexion cuando se finaliza su uso
+   $db->close();  // Cerrar la conexion cuando se finaliza su uso
 
 }
 

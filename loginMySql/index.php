@@ -21,7 +21,7 @@ if(isset($_POST["Enviar"])) {
         var_dump($fila);
 
 
-    //$db.close();
+    $db->close();
 
 }
 

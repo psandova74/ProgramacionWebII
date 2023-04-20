@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+html {
+
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+}
+
+p, label {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+
+.item-ejercicio {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+.ejercicio-contenedor{
+    padding: 1.5rem;
+    border: #000 1px solid;
+    max-width: 120rem;
+    width: 95%;
+    height: 50rem;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    border: #000 1px solid;
+    background-color: blueviolet;
+    padding: 1rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 4rem 0;
+    border: #000 1px solid;
+    background-color:  rgb(151, 20, 147);
+    padding: 0.5rem;
+}
+
+h5 {
+    text-align: right;
+    margin: 4rem 0;
+    border: #000 1px solid;
+    background-color: blueviolet;
+    padding: 1rem;
+}
+span{
+    color:blue;
+    padding: 0.5rem;
+}
+nav{
+    background-color:  rgb(255, 196, 252);
+    /*border-bottom: #E09DF2 1px solid;*/
+}
+nav a{
+    text-decoration:none;
+    background-color: rgb(255, 196, 252);
+    display: block;
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap:wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+nav li{
+    display: inline-block;
+    width: 20%;
+    padding: 0.5em 0.5em;
+    background-color: rgb(255, 196, 252);
+    border:2px solid #489bad;
+    text-align: center;
+    border-radius: 0.3em;
+    font-size: larger;
+    font-weight: 500;
+}
+
+nav li:hover{
+    background-color:  rgb(177, 167, 242, 20);
+    transition: ease;
+    transition-duration: 0.2s;
+}
+nav a:hover{
+    color:#6d3ef0;
+}
+.imagen-mostrar{
+    width: 200px;
+
+}
+
+contenedor-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 10%;
+    padding: 1em;
+
+}
+contiene-imagen{
+    max-width: 80%;
+    height: auto;
+    position: relative;
+    flex-basis: 26%;
+    padding: 1em;
+}
+
+
+
