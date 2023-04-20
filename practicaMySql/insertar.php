@@ -20,7 +20,8 @@ $sql = "insert into pokemones (numero, tipo, nombre, descripcion, imagen) values
 $statment= $conn->prepare($sql);
 
 //ejecutar esa consulta
-$statment->bind_param(types: 'iisss', $numero,$tipo,$nombre,$descripcion,$imagen);
+echo $numero . " ". $tipo  . " ". $nombre . " ".  $descripcion . " ".  $imagen;
+$statment->bind_param("iisss", $numero,$tipo, $nombre, $descripcion, $imagen);
 $result = $statment->execute();
 
 redirect(url: 'index.php?message=alta');
