@@ -7,7 +7,6 @@ class FigurasFactory
     public function __construct() {
 
     }
-
     public function create($jugada, string $jugador){
         switch ($jugada){
             case "piedra":
@@ -17,7 +16,7 @@ class FigurasFactory
             case "tijera":
                 return new Tijera($jugador);
         }
-        return null;
+        return new Piedra("No existe");
     }
 
 }
