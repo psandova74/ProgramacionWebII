@@ -1,6 +1,6 @@
 <?php
 class Papel {
-    private $jugador;
+    private string $jugador;
     public function __construct($jugador){
         $this->jugador = $jugador;
     }

@@ -35,8 +35,9 @@
    <?php
    foreach (glob("../imagenes/*.jpg") as $filename) {
       //
+
        $nombreArch = basename($filename);
-       echo "<article class='contiene-imagen'> <img src='".$filename."' class='imagen-mostrar'> <p class='nombre-imagen'>".$nombreArch." </p> </article>";
+       echo "<article class='contiene-imagen'> <img src='" . $filename . "' class='imagen-mostrar'> <p class='nombre-imagen'>". $nombreArch ." </p> </article>";
     }
     ?>
 

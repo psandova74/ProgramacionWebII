@@ -16,7 +16,6 @@ class FigurasFactory
             case "tijera":
                 return new Tijera($jugador);
         }
-        return new Piedra("No existe");
     }
 
 }
