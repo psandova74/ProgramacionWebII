@@ -29,19 +29,31 @@
 </header>
 
 <body>
-
+<h3>Ejercicio 10</h3>
 <section class="ejercicio-contenedor">
-<h4>Ejercicio 10</h4>
+    <?php
+    $directory="../imagenes";
+    $dirint = dir($directory);
+    while (($archivo = $dirint->read()) !== false)
+    {
+        if( $archivo != '.' && $archivo != '..' ) {
+            if (((strpos($archivo, "gif") || strpos($archivo, "jpeg") ||
+                    strpos($archivo, "jpg")) || strpos($archivo, "png"))) {
+                echo "<a href='mostrarimagen.php?archivo=". $archivo. "'> " . $archivo . "</a><br>";
+            }
+        }
+
+    }
+    $dirint->close();
+
+    ?>
 
 
 </section>
 
-
-
-
 </body>
 <footer>
-    <h5>Guia de Trabajos Practicos</h5>
+    <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>
 </footer>
 </html>
 

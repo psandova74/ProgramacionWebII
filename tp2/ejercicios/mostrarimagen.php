@@ -29,34 +29,26 @@
 </header>
 
 <body>
-<h3>Ejercicio 9</h3>
-<section class="flex-container">
+<h3>Ejercicio 10</h3>
+<section class="ejercicio-contenedor">
 
-   <?php
-   $directory="../imagenes";
-   $dirint = dir($directory);
-   while (($archivo = $dirint->read()) !== false)
-   {
-      if( $archivo != '.' && $archivo != '..' ) {
-          if (((strpos($archivo, "gif") || strpos($archivo, "jpeg") ||
-                  strpos($archivo, "jpg")) || strpos($archivo, "png"))) {
-              echo "<span> <img src='../imagenes/" . $archivo . "' class='imagen-mostrar'> <label> " . $archivo . "</label></span>";
-          }
-      }
-
-   }
-   $dirint->close();
-
+    <?php
+    $directory="../imagenes";
+    $archivo= $_GET["archivo"];
+     echo "<H4>" . $archivo . "</H4>";
+      echo "<img src='../imagenes/" . $archivo . "' class='imagen-mostrar-individual'>";
     ?>
 </section>
-<section>
-    <form action="subeimagen.php" method="post" enctype="multipart/form-data">
-        <label for="nombre">Nombre: </label>
-        <input type="file" name="archivo" >
-        <input type="submit" name="Enviar" value="Publicar">
-    </form>
+<?php
+$archivo = 'visitas.json';
+if(file_exists($archivo)) {
+    $datos = file_get_contents($archivo);
+    $arraymostrar = json_decode($datos);
 
-</section>
+
+}
+
+?>
 
 </body>
 <footer>

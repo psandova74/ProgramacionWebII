@@ -43,7 +43,6 @@ p, label {
 }
 .ejercicio-contenedor{
     padding: 1.5rem;
-    border: #000 1px solid;
     max-width: 120rem;
     width: 95%;
     height: 50rem;
@@ -120,7 +119,10 @@ nav a:hover{
 
 }
 
+.imagen-mostrar-individual{
+    max-height: 90%;
 
+}
 
 .flex-container {
     display: flex;

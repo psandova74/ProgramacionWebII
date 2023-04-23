@@ -29,18 +29,53 @@
 </header>
 
 <body>
-
+<h3>Ejercicio 12</h3>
 <section class="ejercicio-contenedor">
-    <h4>Ejercicio 12</h4>
+
+    <h1>Ingrese sus datos de ingreso a nuestro planeta</h1>
+    <form method="post" action="extraterrestes.php">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="planeta">Planeta:</label>
+        <select id="planeta" name="planeta">
+            <option value="Mercurio">Mercurio</option>
+            <option value="Venus">Venus</option>
+            <option value="Tierra">Tierra</option>
+            <option value="Marte">Marte</option>
+            <option value="Jupiter">Júpiter</option>
+            <option value="Saturno">Saturno</option>
+            <option value="Urano">Urano</option>
+            <option value="Neptuno">Neptuno</option>
+            <option value="Pluton">Pluton</option>
+        </select><br><br>
+        <input type="submit" value="Enviar">
+    </form><br>
+
+<?php
+$archivo = 'visitas.json';
+if(file_exists($archivo)){
+    $datos = file_get_contents($archivo);
+    $array_datos = json_decode($datos, true); // convierte el JSON en un array asociativo
+    $total_visitas = 0;
+    foreach($array_datos as $visita){
+        echo $visita['nombre'].' visitó '.$visita['planeta'].'<br>';
+        if($visita['planeta'] != 'Tierra'){
+            $total_visitas++;
+        }
+    }
+    echo '<br>Total de visitas a planetas que no son la Tierra: '.$total_visitas;
+}else{
+    echo '<br>No hay visitas registradas aún';
+}
+?>
+
 
 
 </section>
 
 
-
-
 </body>
 <footer>
-    <h5>Guia de Trabajos Practicos</h5>
+    <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>
 </footer>
 </html>

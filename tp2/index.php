@@ -39,6 +39,6 @@
 
 </body>
 <footer>
-    <h5>Guia de Trabajos Practicos</h5>
+    <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>
 </footer>
 </html>

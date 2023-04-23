@@ -29,37 +29,50 @@
 </header>
 
 <body>
-<h3>Ejercicio 9</h3>
-<section class="flex-container">
-
-   <?php
-   $directory="../imagenes";
-   $dirint = dir($directory);
-   while (($archivo = $dirint->read()) !== false)
-   {
-      if( $archivo != '.' && $archivo != '..' ) {
-          if (((strpos($archivo, "gif") || strpos($archivo, "jpeg") ||
-                  strpos($archivo, "jpg")) || strpos($archivo, "png"))) {
-              echo "<span> <img src='../imagenes/" . $archivo . "' class='imagen-mostrar'> <label> " . $archivo . "</label></span>";
-          }
-      }
-
-   }
-   $dirint->close();
-
-    ?>
-</section>
-<section>
-    <form action="subeimagen.php" method="post" enctype="multipart/form-data">
-        <label for="nombre">Nombre: </label>
-        <input type="file" name="archivo" >
-        <input type="submit" name="Enviar" value="Publicar">
+<h3>Ejercicio 13</h3>
+<section class="ejercicio-contenedor">
+    <h1>Menú del día</h1>
+    <form action="ejercicio13.php" method="post">
+        <p>Seleccione los pasos del menú que desea:</p>
+        <input type="checkbox" name="entrada" value="Snacks">Entrada<br>
+        <input type="checkbox" name="plato_principal" value="Milanesa">Plato principal<br>
+        <input type="checkbox" name="acompanamiento" value="Papas fritas">Acompañamiento<br>
+        <input type="checkbox" name="postre" value="Helado">Postre<br>
+        <input type="submit" value="Enviar">
     </form>
+    <br>
+    <h4>Seleccion realizada:</h4>
+    <?php
+    // comprobar si se envió el formulario
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // leer el archivo menu.ini
+        $menu = parse_ini_file("menu.ini");
+
+        // comprobar qué pasos del menú se seleccionaron y mostrarlos
+        if(isset($_POST['entrada'])){
+            echo "<p>".$menu['entrada']."</p>";
+        }
+        if(isset($_POST['plato_principal'])){
+            echo "<p>".$menu['plato_principal']."</p>";
+        }
+        if(isset($_POST['acompanamiento'])){
+            echo "<p>".$menu['acompanamiento']."</p>";
+        }
+        if(isset($_POST['postre'])){
+            echo "<p>".$menu['postre']."</p>";
+        }
+    }
+    ?>
+
 
 </section>
+
+
+
 
 </body>
 <footer>
     <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>
 </footer>
 </html>
+
