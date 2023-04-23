@@ -29,21 +29,32 @@
 </header>
 
 <body>
-
-<section class="contenedor-imagenes">
+<h3>Ejercicio 9</h3>
+<section class="flex-container">
 
    <?php
-   foreach (glob("../imagenes/*.jpg") as $filename) {
-      //
+   $directory="../imagenes";
+   $dirint = dir($directory);
+   while (($archivo = $dirint->read()) !== false)
+   {
+      if( $archivo != '.' && $archivo != '..' ) {
+          if (((strpos($archivo, "gif") || strpos($archivo, "jpeg") ||
+                  strpos($archivo, "jpg")) || strpos($archivo, "png"))) {
+              echo "<span> <img src='../imagenes/" . $archivo . "' class='imagen-mostrar'> <label> " . $archivo . "</label></span>";
+          }
+      }
 
-       $nombreArch = basename($filename);
-       echo "<article class='contiene-imagen'> <img src='" . $filename . "' class='imagen-mostrar'> <p class='nombre-imagen'>". $nombreArch ." </p> </article>";
-    }
+   }
+   $dirint->close();
+
     ?>
-
-
-
-
+</section>
+<section>
+    <form action="subeimagen.php" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre: </label>
+        <input type="file" name="archivo" >
+        <input type="submit" name="Enviar" value="Publicar">
+    </form>
 
 </section>
 
