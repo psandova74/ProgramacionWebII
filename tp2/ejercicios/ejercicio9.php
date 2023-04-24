@@ -30,6 +30,7 @@
 
 <body>
 <h3>Ejercicio 9</h3>
+<div class="ejercicio-contenedor">
 <section class="flex-container">
 
    <?php
@@ -57,7 +58,7 @@
     </form>
 
 </section>
-
+</div>
 </body>
 <footer>
     <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>

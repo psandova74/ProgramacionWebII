@@ -32,14 +32,33 @@
 <h3>Ejercicio 16</h3>
 <section class="ejercicio-contenedor">
 
+   <h1>Piedra Papel o Tijera</h1>
+    <form action="ejercicio16.php" method="post">
+        <label>Nombre Jugador: </label> <input type="text" name="jugador1" >
+        <label>Ingrese jugada: </label> <input type="text" name="jugada1" > <br><br>
+        <input type="submit" value="Enviar">
 
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        include_once("figuras/FigurasFactory.php");
+        include_once("funciones.php");
+        $figurasFactory = new FigurasFactory();
+        $jugador1 = $_POST["jugador1"];
+        $jugada1 = $_POST["jugada1"];
+        $jugador2 = "Maquina";
+        $jugada2 = piedrapapeltijera();
+        echo "<br>Jugaste: " . $jugada1;
+        echo "<br>La Maquina: " . $jugada2;
+        $j1 = $figurasFactory->create($jugada1 , $jugador1);
+        $j2 = $figurasFactory->create($jugada2 , $jugador2);
+        echo "<br>Ganador: " . $j1->jugar($j2);
+    }
 
+    ?>
 </section>
 
-
-
-
-</body>
+ </body>
 <footer>
     <h5>Programacion Web II  -  Guia de Trabajos Practicos</h5>
 </footer>

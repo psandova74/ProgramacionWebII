@@ -31,11 +31,34 @@
 <body>
 <h3>Ejercicio 15</h3>
 <section class="ejercicio-contenedor">
-
+    <h4>Busqueda de cantidad de palabra clave</h4>
+    <form action="ejercicio15.php" method="POST">
+    <label>Palabra a buscar: </label> <input type="text" name="clave"><br><br>
+    <label>Texto de busqueda: </label> <br>
+        <textarea name="texto" cols="100" rows="20">¿Qué es PHP y cómo funciona?
+PHP es un lenguaje de programación destinado a desarrollar aplicaciones para la web y crear páginas web, favoreciendo la conexión entre los servidores y la interfaz de usuario.
+Entre los factores que hicieron que PHP se volviera tan popular, se destaca el hecho de que es de código abierto.
+Esto significa que cualquiera puede hacer cambios en su estructura. En la práctica, esto representa dos cosas importantes:
+es de código abierto, no hay restricciones de uso vinculadas a los derechos. El usuario puede usar PHP para programar en cualquier proyecto y comercializarlo sin problemas.
+está en constante perfeccionamiento, gracias a una comunidad de desarrolladores proactiva y comprometida.</textarea> <br>
+        <input type="submit" value="Enviar">
+    </form>
 
 
 </section>
+ <section class="ejercicio-contenedor-grande" >
+     <h4>Cantidad de ocurrencias</h4>
+     <?php
+     include_once("funciones.php");
+     if(isset($_POST['texto'] )&& isset($_POST['clave'])){
+         $texto = $_POST['texto'];
+         $clave = $_POST['clave'];
+         echo buscar($clave, $texto);
 
+     }
+
+     ?>
+ </section>
 
 
 

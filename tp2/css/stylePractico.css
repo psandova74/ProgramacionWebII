@@ -41,13 +41,7 @@ p, label {
     width: 95%;
     margin: 0 auto;
 }
-.ejercicio-contenedor{
-    padding: 1.5rem;
-    max-width: 120rem;
-    width: 95%;
-    height: 50rem;
-    margin: 0 auto;
-}
+
 
 h2 {
     text-align: center;
@@ -90,8 +84,8 @@ nav ul{
     display: flex;
     flex-wrap:wrap;
     list-style: none;
-    margin-bottom: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 nav li{
@@ -124,10 +118,24 @@ nav a:hover{
 
 }
 
+.ejercicio-contenedor{
+    padding: 1.5rem;
+    max-width: 120rem;
+    width: 95%;
+    height: 50rem;
+    margin: 0 auto;
+}
+
+.ejercicio-contenedor-grande{
+    padding: 1.5rem;
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
 .flex-container {
     display: flex;
     flex-direction: row;
-
+    width: 95%;
 }
 
 .flex-container >span{

@@ -30,14 +30,65 @@
 
 <body>
 <h3>Ejercicio 14</h3>
-<section class="ejercicio-contenedor">
+<section class="ejercicio-contenedor-grande">
 
+    <h1>Matriz cuadrada</h1>
+    <form action="ejercicio14.php" method="post">
+        <p>Ingrese la dimensión de la matriz cuadrada:</p>
+        <input type="text" name="dimension">
+        <input type="submit" value="Crear matriz">
+    </form>
 
+    <?php
+    if(isset($_POST['dimension'])){
+        $dimension = $_POST["dimension"];
 
+        // crear la matriz
+        $matriz = array();
+        for ($i=0; $i<$dimension; $i++) {
+            $matriz[$i] = array();
+            for ($j=0; $j<$dimension; $j++) {
+                $matriz[$i][$j] = $i*$dimension+$j+1;
+            }
+        }
+
+        // mostrar la matriz
+        echo "<h4>Matriz:</h4>";
+        echo "<table border='1'>";
+        for ($i=0; $i<$dimension; $i++) {
+            echo "<tr>";
+            for ($j=0; $j<$dimension; $j++) {
+                echo "<td>".$matriz[$i][$j]."</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+
+        // recorrer la matriz y mostrar la diagonal principal
+        echo "<h4>Diagonal principal:</h4>";
+        for ($i=0; $i<$dimension; $i++) {
+            echo $matriz[$i][$i].", ";
+        }
+
+        // recorrer la matriz y mostrar la diagonal secundaria
+        echo "<h4>Diagonal secundaria:</h4>";
+        for ($i=0; $i<$dimension; $i++) {
+            echo $matriz[$i][$dimension-$i-1].", ";
+        }
+
+        // recorrer la matriz y sumar todos los valores
+        $suma = 0;
+        for ($i=0; $i<$dimension; $i++) {
+            for ($j=0; $j<$dimension; $j++) {
+                $suma += $matriz[$i][$j];
+            }
+        }
+        echo "<h4>Suma de todos los valores:</h4>";
+        echo $suma;
+
+    }
+    ?>
 </section>
-
-
-
 
 </body>
 <footer>

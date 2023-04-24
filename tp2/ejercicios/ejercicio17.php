@@ -34,6 +34,26 @@
 
 
 
+
+    <?php
+    include_once("calculadora/Operando.php");
+    include_once("calculadora/Sumar.php");
+    include_once("calculadora/Restar.php");
+    include_once("calculadora/Multiplicar.php");
+
+    echo "<p> \$resultado = new Sumar(new Restar( new Operando(5), new Operando(3)) ,new Sumar( new Operando(3), new Operando(4))
+    ).resolverEcuacion();</p>";
+    $ecuacion = new Multiplicar(
+        new Sumar(
+            new Restar(new Operando(5), new Operando(3)),
+            new Sumar(new Operando(3), new Operando(4))
+        ),
+        new Operando(2)
+    );
+    $resultado = $ecuacion->resolverEcuacion(); // resultado es 18
+    echo "Resultado: " . $resultado;
+    ?>
+
 </section>
 
 
