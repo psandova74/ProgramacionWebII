@@ -22,8 +22,6 @@
             <li>	<a href="ejercicio16.php">Ejercicio 16</a>		</li>
             <li>	<a href="ejercicio17.php">Ejercicio 17</a>		</li>
             <li>	<a href="ejercicio18.php">Ejercicio 18</a>		</li>
-            <li>	<a href="ejercicio19.php">Ejercicio 19</a>		</li>
-            <li>	<a href="ejercicio20.php">Ejercicio 20</a>		</li>
         </ul>
     </nav>
 </header>

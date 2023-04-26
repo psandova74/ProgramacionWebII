@@ -22,8 +22,6 @@
             <li>	<a href="ejercicio16.php">Ejercicio 16</a>		</li>
             <li>	<a href="ejercicio17.php">Ejercicio 17</a>		</li>
             <li>	<a href="ejercicio18.php">Ejercicio 18</a>		</li>
-            <li>	<a href="ejercicio19.php">Ejercicio 19</a>		</li>
-            <li>	<a href="ejercicio20.php">Ejercicio 20</a>		</li>
         </ul>
     </nav>
 </header>
@@ -31,8 +29,58 @@
 <body>
 <h3>Ejercicio 18</h3>
 <section class="ejercicio-contenedor">
+    <h1>Packman</h1>
+    <?php
+    include_once("packman/Packman.php");
+    include_once('packman/Partida.php');
+    include_once('packman/FantasmaComestible.php');
+    include_once('packman/Pildora.php');
+    include_once('packman/Espina.php');
+    include_once('packman/Fantasma.php');
+
+    try {
+        $puntaje = 0;
+
+        $partida = new Partida($puntaje);
+        $packman = new Packman($partida);
+        $pildora = new Pildora();
+        $espina = new Espina();
+        $fantasma = new Fantasma();
+
+        $fantasmaComestible = new FantasmaComestible();
+
+        $packman->chocaContra($fantasmaComestible);
+        $partida->mostrarPuntaje();
+
+        $packman->chocaContra($fantasmaComestible);
+        $packman->chocaContra($fantasmaComestible);
+        $partida->mostrarPuntaje();
+
+        $packman->chocaContra($pildora);
+        $partida->mostrarPuntaje();
+
+        $packman->chocaContra($pildora);
+        $packman->chocaContra($pildora);
+        $partida->mostrarPuntaje();
+
+        $packman->chocaContra($espina);
+        $packman->chocaContra($espina);
+        $partida->mostrarPuntaje();
 
 
+        $packman->chocaContra($fantasma);
+        $partida->mostrarPuntaje();
+
+        $packman->chocaContra($fantasma);
+        $packman->chocaContra($fantasma);
+        $partida->mostrarPuntaje();
+
+    } catch (FinDePartida $e) {
+        echo  $e->getMessage();
+    }
+
+
+    ?>
 
 </section>
 

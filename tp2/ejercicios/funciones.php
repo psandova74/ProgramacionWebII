@@ -55,9 +55,7 @@ function subir_fichero($directorio_destino, $nombre_fichero)
 
 /**
  * piedrapapeltijera()
- *
- * Devuelve uno de los valores validos Piedra Papel o Tijera.
-
+ * Recibe una palabra a buscar y un texto, y devuelve cuántas ocurrencias hubo de la misma en el texto.
  * @return String
  */
 function piedrapapeltijera(){
@@ -69,6 +67,23 @@ function piedrapapeltijera(){
             return "papel";
         case 3:
             return "tijera";
+    }
+}
+
+/**
+ * fizzBuzz()
+ *
+ * Devuelve uno de los valores validos Piedra Papel o Tijera.
+ * @param numero Para evaluar
+ * @return retorna el numero o palabra segun corresponda
+ */
+function fizzBuzz($number){
+    if ($number % 3 == 0 && $number % 5 == 0) {
+        return "FizzBuzz";
+    } else if ($number % 3 == 0) {
+        return "Fizz";
+    } else if ($number % 5 == 0) {
+        return "Buzz";
     }
 }
 

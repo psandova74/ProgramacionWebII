@@ -134,8 +134,8 @@ nav a:hover{
 }
 .flex-container {
     display: flex;
-    flex-direction: row;
-    width: 95%;
+    flex-wrap:wrap;
+    list-style: none;
 }
 
 .flex-container >span{
@@ -144,5 +144,14 @@ nav a:hover{
     align-items: center;
 }
 
+.fizz{
+    color : red;
+}
+.buzz{
+    color: blueviolet;
+}
+.fizzbuzz{
+    color: #9c27b0;
+}
 
 

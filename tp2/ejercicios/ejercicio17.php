@@ -22,17 +22,15 @@
             <li>	<a href="ejercicio16.php">Ejercicio 16</a>		</li>
             <li>	<a href="ejercicio17.php">Ejercicio 17</a>		</li>
             <li>	<a href="ejercicio18.php">Ejercicio 18</a>		</li>
-            <li>	<a href="ejercicio19.php">Ejercicio 19</a>		</li>
-            <li>	<a href="ejercicio20.php">Ejercicio 20</a>		</li>
         </ul>
     </nav>
 </header>
 
 <body>
 <h3>Ejercicio 17</h3>
-<section class="ejercicio-contenedor">
+<section class="ejercicio-contenedor-grande">
 
-
+    <h1>Calculadora</h1>
 
 
     <?php
@@ -41,17 +39,31 @@
     include_once("calculadora/Restar.php");
     include_once("calculadora/Multiplicar.php");
 
-    echo "<p> \$resultado = new Sumar(new Restar( new Operando(5), new Operando(3)) ,new Sumar( new Operando(3), new Operando(4))
-    ).resolverEcuacion();</p>";
-    $ecuacion = new Multiplicar(
-        new Sumar(
-            new Restar(new Operando(5), new Operando(3)),
-            new Sumar(new Operando(3), new Operando(4))
-        ),
-        new Operando(2)
-    );
-    $resultado = $ecuacion->resolverEcuacion(); // resultado es 18
-    echo "Resultado: " . $resultado;
+    echo "<p> \$resta = ( new Restar(new Operando(5), new Operando(3))); </p>";
+    $resta= ( new Restar(new Operando(5), new Operando(3)));
+    echo "Mostrar ecuacion: " . $resta->mostrarEcuacion();
+    echo "<br>Resultado: " . $resta->resolverEcuacion();
+
+    echo "<p> \$suma = (new Sumar(new Operando(3), new Operando(4))); </p>";
+    $suma = (new Sumar(new Operando(3), new Operando(4)));
+    echo "Mostrar ecuacion: " . $suma->mostrarEcuacion();
+    echo "<br>Resultado: " . $suma->resolverEcuacion();
+
+    echo "<p> \$resultado = (new Sumar(<br>new Restar( new Operando(5), new Operando(3)) ,<br>new Sumar( new Operando(3), new Operando(4))<br>);</p>";
+    $sumaoperaciones= (new Sumar(new Restar( new Operando(5), new Operando(3)) ,new Sumar( new Operando(3), new Operando(4))));
+    echo "Mostrar ecuacion: " . $sumaoperaciones->mostrarEcuacion();
+    echo "<br>Resultado: " . $sumaoperaciones->resolverEcuacion();
+
+    echo "<p> \$resultado = (new Multiplicar(<br>
+            new Sumar(<br>new Restar(new Operando(5), new Operando(3)),<br>
+                new Sumar(new Operando(3), new Operando(4))),<br>
+            new Operando(2)));</p>";
+    $ecuacion = (new Multiplicar(
+        new Sumar(new Restar(new Operando(5), new Operando(3)),
+        new Sumar(new Operando(3), new Operando(4))            ),
+        new Operando(2)));
+        echo "Mostrar ecuacion: " . $ecuacion->mostrarEcuacion();
+        echo "<br>Resultado: " . $ecuacion->resolverEcuacion();
     ?>
 
 </section>
